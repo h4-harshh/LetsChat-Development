@@ -1,1 +1,8 @@
 2:39:20
+
+
+//git command
+
+git add -A
+git commit -m "your message"
+git push origin main

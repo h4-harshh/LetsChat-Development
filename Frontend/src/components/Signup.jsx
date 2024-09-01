@@ -1,10 +1,14 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { useAuth } from '../context/AuthProvider.jsx';
+import { Link } from 'react-router-dom';
 
 
 
 const Signup = () => {
+
+    const [authUser,setAuthUser]=useAuth()
 
     const {
     register,
@@ -23,20 +27,22 @@ const Signup = () => {
         return value===password || "Password do not match"
     }
     
-    const onSubmit = (data) => {
+    const onSubmit =async (data) => {
         const userInfo={
             fullname:data.fullname,
             email:data.email,
             password:data.password,
             confirmPassword:data.confirmPassword
         };
-        axios
+        await axios
         .post("http://localhost:4000/user/signup",userInfo)
         .then((response)=>{
             if(response.data){
                 alert("Signup Successful");
             }
             localStorage.setItem("LetsChat",JSON.stringify(response.data));
+            setAuthUser(response.data);
+
         })
         .catch((error)=>{
             if(error.response){
@@ -118,12 +124,12 @@ const Signup = () => {
             {/* Text and Button */}
             <div className="flex justify-between">
                 <p className='text-white'>Have an account?
-              <a
-                // to="/login"
+              <Link
+                to="/login"
                 className="text-blue-500 underline cursor-pointer ml-1"
               >
                 Login
-              </a></p>
+              </Link></p>
                 <input type="submit" value="Signup" className="text-white bg-green-500 px-2 py-1 cursor-pointer rounded-lg"/>
             </div>
 
