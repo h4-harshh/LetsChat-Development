@@ -3,12 +3,15 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoute from "./routes/user.route.js";
+import cookieParser from 'cookie-parser';
 
 const app = express()
 dotenv.config();
 
 //middleware
 app.use(express.json());
+
+app.use(cookieParser());
 app.use(cors());
 
 const PORT=process.env.PORT || 4000;
