@@ -1,6 +1,10 @@
 import React from 'react'
+import useConversation from '../../zustand/useConversation.js';
 
 const Chatuser = () => {
+
+  const {selectedConversation}=useConversation();
+
   return (
     <div className='flex space-x-3 items-center justify-center h-[10vh] bg-gray-800 hover:bg-gray-700 duration-300'>
         <div className="avatar online">
@@ -9,7 +13,7 @@ const Chatuser = () => {
             </div>
         </div>
         <div>
-            <h1 className='xl'>Harsh</h1>
+            <h1 className='xl'>{selectedConversation.fullname}</h1>
             <span className='sm'>Offline</span>
         </div>
     </div>

@@ -7,7 +7,7 @@ export const sendMessage= async (req,res)=>{
         const {id:receiverId}=req.params;
         const senderId=req.user._id;    //current loggedIn user id
         let conversation= await Conversation.findOne({
-            members:[senderId,receiverId],
+            members:{$all: [senderId,receiverId]},
         });
         if(!conversation){
             conversation = await Conversation.create({
@@ -42,12 +42,13 @@ export const getMesssage = async (req,res)=>{
         const {id: chatUser}= req.params;
         const senderId=req.user._id;
         let conversation = await Conversation.findOne({
-            members:{$all:[senderId,chatUser]},
+            members:{ $all: [senderId,chatUser]},
         }).populate("messages");
         if(!conversation){
             return res.status(201).json([]);
         }
         const messages=conversation.messages;
+        console.log(messages);
         res.status(201).json(messages);
     } catch (error) {
         console.log("Error in sendMessage", error);

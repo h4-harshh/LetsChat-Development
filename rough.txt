@@ -2,12 +2,13 @@
 3:57:56->DAY2
 4:30:38
 4:35:03
+5:11:03
 
 
 //git command
 
 git add -A
-git commit -m "your message"
+git commit -m "displaying messages done ans showing name at top"
 git push origin main
 
 
