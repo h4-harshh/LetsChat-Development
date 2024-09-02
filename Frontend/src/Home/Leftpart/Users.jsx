@@ -7,7 +7,7 @@ import useGetAllUsers from '../../context/useGetAllUsers.jsx';
 const Users = () => {
 
   const [allUsers,loading]=useGetAllUsers();
-  console.log(allUsers);
+  // console.log(allUsers);
 
   return (
     <div className='p-1' >
