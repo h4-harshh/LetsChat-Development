@@ -23,7 +23,7 @@ try {
 } catch (error) {
     console.log(error);
 }
-app.use("/user",userRoute);
+app.use("/api/user",userRoute);
 
 
 app.get('/', (req, res) => {

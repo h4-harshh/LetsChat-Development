@@ -5,9 +5,11 @@ import Logout from './Logout.jsx';
 
 const Left = () => {
   return (
-    <div className='w-[30%]  bg-black text-gray-300'>
+    <div className='w-[30%]  bg-black text-gray-300' >
         <Search/>
-        <Users/>
+        <div style={{minHeight:"calc(84vh - 10vh)"}}>
+          <Users/>
+        </div>
         <Logout/>
     </div>
   )
