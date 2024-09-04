@@ -18,7 +18,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={
         authUser ? (
-          <div className='overflow-y-hidden'>
+          <div className=''>
             <div className='flex h-screen'>
               <Left />
               <Right />

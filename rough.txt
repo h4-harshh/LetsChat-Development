@@ -10,7 +10,7 @@
 //git command
 
 git add -A
-git commit -m "message send and receiving done"
+git commit -m "online offline status done"
 git push origin main
 
 
