@@ -38,11 +38,12 @@ const NoChatSelected=()=>{
       <div className='relative'>
         <label
             htmlFor="my-drawer-2"
-            className="btn btn-ghost drawer-button lg:hidden absolute left-5"
+            className="btn btn-ghost drawer-button lg:hidden absolute mt-2 left-5"
           >
-            <CiMenuFries className="text-white text-xl" />
+            <CiMenuFries className="text-white text-3xl" />
         </label>
-        <div className='flex h-screen items-center justify-center'>
+        <div className='flex flex-col h-screen items-center justify-center'>
+        <h1 className='text-5xl font-serif text-white'><span>Lets</span><span className='text-green-500' >Chat</span></h1>
           <h1 className='text-center'>Welcome{" "} <span className='font-semibold text-xl'>{authUser.user.fullname}</span><br />
             No chat selected, please start conversation by selecting anyone to your contacts
           </h1>

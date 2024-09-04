@@ -20,9 +20,9 @@ const Chatuser = () => {
     <div className='relative'>
         <label
             htmlFor="my-drawer-2"
-            className="btn btn-ghost drawer-button lg:hidden absolute left-5"
+            className="btn btn-ghost drawer-button lg:hidden absolute left-5 mt-2"
           >
-            <CiMenuFries className="text-white text-xl" />
+            <CiMenuFries className="text-white text-3xl" />
         </label>
       <div className='flex space-x-3 items-center justify-center h-[10vh] bg-gray-800 hover:bg-gray-700 duration-300'>
           <div className={`avatar ${isOnline === "online"?"online":""}`}>
