@@ -10,7 +10,7 @@
 //git command
 
 git add -A
-git commit -m "displaying messages done ans showing name at top"
+git commit -m "message send and receiving done"
 git push origin main
 
 

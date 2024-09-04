@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import userRoute from "./routes/user.route.js";
 import messageRoute from './routes/message.route.js';
 
-const app = express()
+import {app, server} from './SockedIO/server.js';
 dotenv.config();
 
 //middleware
@@ -29,10 +29,6 @@ app.use("/api/user",userRoute);
 app.use("/api/message",messageRoute);
 
 
-app.get('/', (req, res) => {
-  res.send('LetsChat Now go!');
-})
-
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
