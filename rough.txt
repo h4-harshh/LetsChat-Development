@@ -10,7 +10,7 @@
 //git command
 
 git add -A
-git commit -m "realtime messaging done with socket io and notification done"
+git commit -m "completed"
 git push origin main
 
 
