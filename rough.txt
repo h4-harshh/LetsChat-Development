@@ -10,7 +10,7 @@
 //git command
 
 git add -A
-git commit -m "online offline status done"
+git commit -m "realtime messaging done with socket io and notification done"
 git push origin main
 
 

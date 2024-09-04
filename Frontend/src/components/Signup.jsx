@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useAuth } from '../context/AuthProvider.jsx';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 
@@ -38,7 +39,7 @@ const Signup = () => {
         .post("/api/user/signup",userInfo)
         .then((response)=>{
             if(response.data){
-                alert("Signup Successful");
+                toast.success("Signup Successful");
             }
             localStorage.setItem("LetsChat",JSON.stringify(response.data));
             setAuthUser(response.data);
@@ -46,7 +47,7 @@ const Signup = () => {
         })
         .catch((error)=>{
             if(error.response){
-                alert("Error: " + error.response.data.error);
+                toast.error("Error: " + error.response.data.error);
             }
         })
     }
