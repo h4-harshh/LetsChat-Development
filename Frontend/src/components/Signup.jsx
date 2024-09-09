@@ -22,7 +22,7 @@ const Signup = () => {
     //watch the password and confirm password field
     
     const password=watch("password","");
-    const confirmPassword=watch("confrimPassword","");
+    const confirmPassword=watch("confirmPassword","");
     
     const validatePasswordMatch=(value)=>{
         return value===password || "Password do not match"

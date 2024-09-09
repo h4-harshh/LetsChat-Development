@@ -1,5 +1,5 @@
 import React from 'react'
-import useConverstation from '../../zustand/useConversation'
+import useConverstation from '../../zustand/useConversation.js'
 import {useSocketContext} from '../../context/SocketContext.jsx'
 
 const User = ({user}) => {

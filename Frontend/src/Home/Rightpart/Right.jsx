@@ -35,6 +35,7 @@ const NoChatSelected=()=>{
   const [authUser]=useAuth();
 
   const fullname = authUser?.user?.fullname || "";
+  console.log(fullname);
   return(
     <>
       <div className='relative'>
